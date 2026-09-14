@@ -4,10 +4,11 @@ import { randomUUID } from "node:crypto";
 import path from "node:path";
 import fs from "node:fs/promises"
 
-
 export const getcourses = async (req: Request, res: Response) => {
     const db = await readDb();
-    res.json(db.courses)
+    if(!db)
+        return res.json("No courses.")
+    return res.json(db.courses)
 }
 
 export const getCourseDetail = async (req: Request, res: Response) => {

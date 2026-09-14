@@ -11,7 +11,9 @@ app.use(cors());
 dotenv.config()
 app.use("/uploads",express.static(path.join(process.cwd(),"uploads")));
 
-app.use("api/courses",courseRoutes)
+
+app.get("/", (req, res) => res.json({message: "Course CRUD API is running",}));
+app.use("/api/courses",courseRoutes)
 
 const port = process.env.Port || 5070;
 app.listen(port,()=>console.log(`app is listening to port : ${port}`))
