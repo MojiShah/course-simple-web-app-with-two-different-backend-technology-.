@@ -8,7 +8,7 @@ export interface ICourse {
     title: string,
     description: string,
     price: number,
-    student: number,
+    students: number,
     img: string
 };
 
