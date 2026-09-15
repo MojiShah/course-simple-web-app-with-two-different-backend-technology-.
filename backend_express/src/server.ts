@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import path from "node:path";
 import dotenv from 'dotenv';
-import courseRoutes from "./routes/courseRoutes.js"
+import courseRoutes from "./routes/courseRoutes.js";
 
 
 const app = express();
